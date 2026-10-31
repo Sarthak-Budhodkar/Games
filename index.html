@@ -1,63 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Mini Games Website</title>
- <link rel="stylesheet" href="Main/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Games | Sarthak Budhodkar</title>
+<meta name="description" content="A small collection of browser games: Tic Tac Toe, Snake, 2048 and Tetris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="Main/theme.css">
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <div class="logo" >
-          <a href="Main/images/logo.png">
-            <img src="Main/images/logo.png" alt="Logo">
-          </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
+<header class="nav">
+  <a href="https://sarthak-budhodkar.github.io/Home-page/" class="logo" aria-label="Home">SB<span>.</span></a>
+  <nav id="menu">
+    <a href="index.html" class="active">Games</a>
+    <a href="https://sarthak-budhodkar.github.io/Home-page/">Portfolio</a>
+    <a href="https://github.com/Sarthak-Budhodkar/Games" target="_blank" rel="noopener">Source</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    <button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
 </header>
-<h1>Mini Games</h1>
-<section class="games">
-    <div class="container">
-        <div class="game">
-          <a href="tic-tac-toe/tic-tac-toe.html">
-              <img src="Main/images/tic-tac-toe.svg" alt="Game 1">
-            <h3>Tic Tac Toe</h3>
-          </a>
+
+<main>
+  <section class="hero">
+    <div class="glow"></div>
+    <p class="eyebrow">Play something</p>
+    <h1>Mini Games</h1>
+    <p class="lead">Four classic games built with plain HTML, CSS and JavaScript. Pick one and jump in.</p>
+  </section>
+
+  <section class="reveal" style="padding-top:2rem">
+    <div class="cards games-grid">
+      <a class="card game-card" href="tic-tac-toe/tic-tac-toe.html">
+        <img src="Main/images/tic-tac-toe.svg" alt="Tic Tac Toe artwork">
+        <div class="body">
+          <h3>Tic Tac Toe</h3>
+          <p>Two players, one board. Get three in a row first.</p>
+          <div class="tags"><span>2 Players</span><span>Quick</span></div>
+          <div class="play">Play now <i class="fas fa-arrow-right"></i></div>
         </div>
-        <div class="game">
-          <a href="snake game/snake.html">
-            <img src="Main/images/snake.svg" alt="Game 2">
-            <h3>Snake Game</h3>
-          </a>
+      </a>
+      <a class="card game-card" href="snake game/snake.html">
+        <img src="Main/images/snake.svg" alt="Snake artwork">
+        <div class="body">
+          <h3>Snake</h3>
+          <p>Eat, grow and don't hit the walls or yourself.</p>
+          <div class="tags"><span>Arcade</span><span>Arrow keys</span></div>
+          <div class="play">Play now <i class="fas fa-arrow-right"></i></div>
         </div>
-        <div class="game">
-          <a href="2048/2048.html">
-            <img src="Main/images/2048.svg" alt="Game 3">
-            <h3>2048</h3>
-          </a>
+      </a>
+      <a class="card game-card" href="2048/2048.html">
+        <img src="Main/images/2048.svg" alt="2048 artwork">
+        <div class="body">
+          <h3>2048</h3>
+          <p>Slide and merge matching tiles to reach 2048.</p>
+          <div class="tags"><span>Puzzle</span><span>Swipe</span></div>
+          <div class="play">Play now <i class="fas fa-arrow-right"></i></div>
         </div>
-        <div class="game">
-          <a href="Tetris/tetris.html">
-            <img src="Main/images/tetris.svg" alt="Game 4">
-            <h3>Tetris</h3>
-          </a>
+      </a>
+      <a class="card game-card" href="Tetris/tetris.html">
+        <img src="Main/images/tetris.svg" alt="Falling blocks artwork">
+        <div class="body">
+          <h3>Tetris</h3>
+          <p>Stack falling blocks and clear lines to survive.</p>
+          <div class="tags"><span>Classic</span><span>Touch ready</span></div>
+          <div class="play">Play now <i class="fas fa-arrow-right"></i></div>
         </div>
+      </a>
     </div>
-</section>
+  </section>
+</main>
+
 <footer>
- <p>This website is created by<br>
- <a href="https://sarthak-budhodkar.github.io/Home-page/"> Sarthak Budhaokar</a></p>
+  <div class="social">
+    <a href="https://github.com/Sarthak-Budhodkar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/SBudhodkar" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/sa43hak" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>Built by <a href="https://sarthak-budhodkar.github.io/Home-page/">Sarthak Budhodkar</a> &middot; &copy; 2026</p>
 </footer>
+<script src="Main/theme.js"></script>
 </body>
 </html>

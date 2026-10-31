@@ -1,0 +1,159 @@
+/* Shared theme for every page — matches the Home-page portfolio */
+:root {
+  --bg: #0b0b12;
+  --surface: #14141f;
+  --border: #26263a;
+  --text: #f2f2f8;
+  --muted: #a0a0b8;
+  --primary: #8b5cf6;
+  --accent: #38bdf8;
+  --grad: linear-gradient(135deg, #8b5cf6, #38bdf8);
+}
+body.light {
+  --bg: #f7f7fb;
+  --surface: #fff;
+  --border: #e2e2ee;
+  --text: #14141f;
+  --muted: #5c5c74;
+}
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; overflow-x: clip }
+body {
+  margin: 0;
+  padding-top: 72px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background .3s, color .3s;
+}
+a { color: var(--accent) }
+
+/* ---------- Navbar ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .9rem 5vw;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.logo { font-weight: 800; font-size: 1.4rem; color: var(--text); text-decoration: none }
+.logo span { color: var(--primary) }
+.nav nav { display: flex; gap: 1.8rem }
+.nav nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: .95rem; transition: color .2s }
+.nav nav a:hover, .nav nav a.active { color: var(--text) }
+.nav-actions { display: flex; gap: .5rem }
+.nav-actions button {
+  background: none; border: 1px solid var(--border); color: var(--text);
+  width: 40px; height: 40px; border-radius: 50%; cursor: pointer; transition: .2s;
+}
+.nav-actions button:hover { border-color: var(--primary); color: var(--primary) }
+#menu-toggle { display: none }
+
+/* ---------- Layout ---------- */
+main { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 5vw; flex: 1 }
+section { padding: 4rem 0 }
+h2 { font-size: 2rem; margin: 0 0 2rem; display: flex; align-items: center; gap: .8rem }
+h2 span { font: 500 1rem 'JetBrains Mono', monospace; color: var(--primary) }
+.muted { color: var(--muted) }
+
+/* ---------- Hero (games index) ---------- */
+.hero { position: relative; padding: 5rem 0 1rem }
+.glow {
+  position: absolute; width: 420px; height: 420px; border-radius: 50%;
+  background: var(--grad); filter: blur(120px); opacity: .25;
+  top: 0; right: 0; max-width: 100%; z-index: -1; pointer-events: none;
+}
+.eyebrow { font-family: 'JetBrains Mono', monospace; color: var(--primary); margin: 0 }
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1; margin: .3rem 0; font-weight: 800;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.lead { color: var(--muted); max-width: 560px; font-size: 1.1rem }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .8rem 1.5rem; border-radius: 999px; font-weight: 600; font-size: .95rem;
+  text-decoration: none; border: 1px solid transparent; transition: .25s;
+  font-family: inherit; cursor: pointer;
+}
+.btn.primary { background: var(--grad); color: #fff }
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, .4) }
+.btn.ghost { background: none; border-color: var(--border); color: var(--text) }
+.btn.ghost:hover { border-color: var(--primary); color: var(--primary) }
+
+/* ---------- Cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.6rem; transition: .25s;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--primary) }
+.card h3 { margin: .8rem 0 .4rem }
+.card p { color: var(--muted); margin: 0 }
+.games-grid { grid-template-columns: repeat(2, 1fr) }
+.game-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; color: inherit; text-decoration: none }
+.game-card img { width: 100%; aspect-ratio: 8 / 5; object-fit: cover; display: block; border-bottom: 1px solid var(--border) }
+.game-card .body { padding: 1.4rem 1.6rem 1.6rem; display: flex; flex-direction: column; flex: 1 }
+.game-card h3 { margin-top: 0 }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem }
+.tags span {
+  font: 500 .8rem 'JetBrains Mono', monospace; padding: .2rem .7rem; border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--primary);
+}
+.game-card .play { margin-top: auto; padding-top: 1.2rem; color: var(--primary); font-weight: 600; font-size: .95rem }
+.game-card:hover .play i { transform: translateX(4px) }
+.game-card .play i { transition: transform .2s }
+
+/* ---------- Game page shell ---------- */
+.game-page { text-align: center; padding: 2rem 0 3rem }
+.game-title {
+  display: table; margin: 0 auto .3rem;
+  font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; line-height: 1.2;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.game-sub { color: var(--muted); margin: 0 auto 1.8rem; max-width: 520px }
+.panel {
+  display: inline-block; max-width: 100%;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.2rem;
+}
+.hint { color: var(--muted); font-size: .9rem; margin-top: 1.2rem }
+kbd {
+  font: 500 .8rem 'JetBrains Mono', monospace; padding: .1rem .5rem; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+
+/* ---------- Footer ---------- */
+footer { text-align: center; padding: 2.5rem 1rem; border-top: 1px solid var(--border); color: var(--muted) }
+footer p { margin: 0 }
+footer a { color: var(--accent); text-decoration: none; font-weight: 600 }
+footer a:hover { color: var(--primary) }
+.social { display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 1rem }
+.social a { color: var(--muted); font-size: 1.4rem; transition: .2s }
+.social a:hover { color: var(--primary); transform: translateY(-3px) }
+
+/* ---------- Reveal animation ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s }
+.reveal.show { opacity: 1; transform: none }
+
+@media (max-width: 760px) {
+  #menu-toggle { display: block }
+  .nav nav {
+    position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    max-height: 0; overflow: hidden; transition: max-height .3s;
+  }
+  .nav nav.open { max-height: 300px }
+  .nav nav a { padding: .9rem 5vw }
+  section { padding: 3rem 0 }
+  .games-grid { grid-template-columns: 1fr }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important }
+  .reveal { opacity: 1; transform: none }
+}
