@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#38bdf8"/></linearGradient><radialGradient id="bg" cx=".75" cy=".1" r="1"><stop offset="0" stop-color="#2a2150"/><stop offset="1" stop-color="#0f0f1a"/></radialGradient></defs><rect width="480" height="300" fill="url(#bg)"/>
+<rect x="170" y="20" width="140" height="260" rx="14" fill="#14141f" stroke="#26263a" stroke-width="2"/>
+<g>
+<g fill="#38bdf8"><rect x="190" y="40" width="24" height="24" rx="4"/><rect x="190" y="66" width="24" height="24" rx="4"/><rect x="190" y="92" width="24" height="24" rx="4"/><rect x="190" y="118" width="24" height="24" rx="4"/></g>
+<g fill="#8b5cf6"><rect x="250" y="40" width="24" height="24" rx="4"/><rect x="224" y="66" width="24" height="24" rx="4"/><rect x="250" y="66" width="24" height="24" rx="4"/><rect x="276" y="66" width="24" height="24" rx="4"/></g>
+<g fill="#f59e0b"><rect x="180" y="248" width="24" height="24" rx="4"/><rect x="206" y="248" width="24" height="24" rx="4"/><rect x="180" y="222" width="24" height="24" rx="4"/></g>
+<g fill="#34d399"><rect x="232" y="248" width="24" height="24" rx="4"/><rect x="258" y="248" width="24" height="24" rx="4"/><rect x="258" y="222" width="24" height="24" rx="4"/><rect x="284" y="222" width="24" height="24" rx="4"/></g>
+<g fill="#f43f5e"><rect x="206" y="222" width="24" height="24" rx="4"/><rect x="232" y="222" width="24" height="24" rx="4"/><rect x="232" y="196" width="24" height="24" rx="4"/><rect x="258" y="196" width="24" height="24" rx="4"/></g>
+</g>
+</svg>

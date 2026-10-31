@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#38bdf8"/></linearGradient><radialGradient id="bg" cx=".75" cy=".1" r="1"><stop offset="0" stop-color="#2a2150"/><stop offset="1" stop-color="#0f0f1a"/></radialGradient></defs><rect width="480" height="300" fill="url(#bg)"/>
+<rect x="100" y="30" width="280" height="240" rx="18" fill="#14141f" stroke="#26263a" stroke-width="2"/>
+<g font-family="Inter,Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" fill="#fff">
+<rect x="116" y="46" width="56" height="48" rx="10" fill="#3b3560"/><text x="144" y="80" font-size="24">2</text>
+<rect x="180" y="46" width="56" height="48" rx="10" fill="#4c3f8a"/><text x="208" y="80" font-size="24">4</text>
+<rect x="244" y="46" width="56" height="48" rx="10" fill="#6d4bd6"/><text x="272" y="80" font-size="24">8</text>
+<rect x="308" y="46" width="56" height="48" rx="10" fill="#8b5cf6"/><text x="336" y="80" font-size="22">16</text>
+<rect x="116" y="102" width="56" height="48" rx="10" fill="#8b5cf6"/><text x="144" y="136" font-size="22">32</text>
+<rect x="180" y="102" width="56" height="48" rx="10" fill="#7e79f1"/><text x="208" y="136" font-size="22">64</text>
+<rect x="244" y="102" width="56" height="48" rx="10" fill="#5e9bf6"/><text x="272" y="136" font-size="19">128</text>
+<rect x="308" y="102" width="56" height="48" rx="10" fill="#38bdf8"/><text x="336" y="136" font-size="19">256</text>
+<rect x="116" y="158" width="120" height="104" rx="10" fill="url(#g)"/><text x="176" y="224" font-size="38">2048</text>
+<rect x="244" y="158" width="56" height="48" rx="10" fill="#3b3560"/><text x="272" y="192" font-size="24">2</text>
+<rect x="308" y="214" width="56" height="48" rx="10" fill="#4c3f8a"/><text x="336" y="248" font-size="24">4</text>
+</g>
+</svg>
