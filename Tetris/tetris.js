@@ -279,13 +279,13 @@ const tetrominos = {
 };
 
 const colors = {
-    'I': 'cyan',
-    'O': 'yellow',
-    'T': 'purple',
-    'S': 'green',
-    'Z': 'red',
-    'J': 'blue',
-    'L': 'orange'
+    'I': '#38bdf8',
+    'O': '#fbbf24',
+    'T': '#8b5cf6',
+    'S': '#34d399',
+    'Z': '#f43f5e',
+    'J': '#6366f1',
+    'L': '#fb923c'
 };
 
 let count = 0;

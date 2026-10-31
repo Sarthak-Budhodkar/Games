@@ -31,11 +31,15 @@ This repository is a small gaming website featuring multiple mini-games and inte
 ## Project Structure
 ```text
 Games/
-├── index.html
-├── styles.css
-├── script.js
-├── assets/
-└── game-files/
+├── index.html            # game hub
+├── Main/
+│   ├── theme.css         # shared theme
+│   ├── theme.js          # theme toggle
+│   └── images/           # SVG artwork
+├── tic-tac-toe/
+├── snake game/
+├── 2048/
+└── Tetris/
 ```
 
 ## Notes

@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris</title>
-    <link href="tetris.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tetris | Mini Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="../Main/theme.css">
+<link rel="stylesheet" href="tetris.css">
 </head>
 <body>
-  <main>
-    <a href="../index.html" class="home-button">X</a>
-    <h1>Tetris</h1>
-    <canvas width="320" height="640" id="game"></canvas>
-    <div class="touch">
-        <div class="rotate" id="cbtn">↻</div>
-        <div class="down">⇩</div>
+<header class="nav">
+  <a href="https://sarthak-budhodkar.github.io/Home-page/" class="logo" aria-label="Home">SB<span>.</span></a>
+  <nav id="menu">
+    <a href="../index.html">Games</a>
+    <a href="https://sarthak-budhodkar.github.io/Home-page/">Portfolio</a>
+    <a href="https://github.com/Sarthak-Budhodkar/Games" target="_blank" rel="noopener">Source</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    <button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <div class="game-page">
+    <h1 class="game-title">Tetris</h1>
+    <p class="game-sub">Stack the falling blocks and clear full lines.</p>
+    <div class="panel">
+      <canvas width="320" height="640" id="game"></canvas>
     </div>
-  </main>
-  <footer>
-        <p>This website is created by<br>
-        <a href="https://sarthaks-project.netlify.app/">Sarthak Budhaokar</a></p>
-  </footer>
-  <script src="tetris.js"></script>
+    <div class="touch">
+      <div class="rotate" id="cbtn" role="button" aria-label="Rotate"><i class="fas fa-rotate-right"></i></div>
+      <div class="down" role="button" aria-label="Drop"><i class="fas fa-angles-down"></i></div>
+    </div>
+    <p class="hint"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> move &middot; <kbd>&darr;</kbd> soft drop &middot; <kbd>Space</kbd> rotate</p>
+  </div>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/Sarthak-Budhodkar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/SBudhodkar" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/sa43hak" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>Built by <a href="https://sarthak-budhodkar.github.io/Home-page/">Sarthak Budhodkar</a> &middot; &copy; 2026</p>
+</footer>
+<script src="../Main/theme.js"></script>
+<script src="tetris.js"></script>
 </body>
 </html>

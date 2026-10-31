@@ -1,128 +1,36 @@
-body {
-  background-color: #323232;
-  margin: 0;
-}
-
-.home-button {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #FF0000;
-  border: 1px solid black;
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 0 0 0 80%;
-  text-align: center;
-  line-height: 45px;
-  font-size: 28px;
-  text-decoration: none;
-}
-
+.panel { padding: .8rem }
 .game-canvas {
-  width: 100%;
-  height: 100vw;
-  max-width: 500px;
-  max-height:500px;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  width: min(400px, 82vw);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  touch-action: none;
 }
-
 .keys {
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  height: 200px;
-  margin: auto;
-  position: relative;
-  top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-areas: ". up ." "left down right";
+  gap: 8px;
+  justify-content: center;
+  margin: 1.4rem auto 0;
 }
-
-.up {
-  position: relative;
-  top: -4px;
-}
-
-.chevron::before {
-  border-style: solid;
-  border-width: 8px 8px 0 0;
-  content: '';
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  top: -10px;
-  position: relative;
-  transform: rotate(-45deg);
-}
-
-.chevron.down::before {
-  transform: rotate(135deg);
-  top: -22px;
-}
-
-.chevron.right::before {
-  transform: rotate(45deg);
-  top: -18px;
-  left: -5px;
-}
-
-.chevron.left::before {
-  transform: rotate(225deg);
-  top: -18px;
-  left: 5px;
-}
-
 .arr {
+  display: flex; align-items: center; justify-content: center;
+  height: 56px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  font-size: 1.2rem;
   cursor: pointer;
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  line-height: 100px;
-  background: gray;
-  color: white;
-  font-size: 50px;
-  border-right: 10px solid #ccc;
-  border-bottom: 10px solid #ccc;
-  border-left: 10px solid #ddd;
-  border-top: 10px solid #eee;
-  display: inline-block;
-  margin: 5px;
-  transition: all .05s linear;
   user-select: none;
+  transition: .2s;
 }
-
-.arr:active {
-  background: #555;
-}
-
-#game-container {
-  display: flex;
-  border: 4px solid black;
-  flex-direction: column;
-  background-color: #585858;
-  margin: 10px;
-  position: relative;
-  top: 50px;
-}
-
-footer {
-  margin: 0;
-  position: fixed; /* Set position to fixed */
-  bottom: 0; /* Anchor to the bottom of the viewport */
-  width: 100%; /* Set width to 100% */
-  background-color: #1f1f1f;
-  text-align: center;
-  z-index: 2; /* Ensure the footer is above the background */
-}
-
-footer p {
-  color: #ffffff; /* Adjusted text color */
-  font-size: 16px; /* Adjusted font size */
-}
-
-footer a {
-  text-decoration: none;
-  color: #36a9f7;
-}
+.arr:hover { border-color: var(--primary); color: var(--primary) }
+.arr:active { background: var(--primary); color: #fff; transform: scale(.94) }
+.arr.up { grid-area: up }
+.arr.left { grid-area: left }
+.arr.down { grid-area: down }
+.arr.right { grid-area: right }
+@media (hover: hover) and (pointer: fine) { .keys { display: none } }

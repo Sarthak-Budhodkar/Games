@@ -1,0 +1,48 @@
+/* Restyles the 2048 board to match the site theme (loaded after 2048.css) */
+html, body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 18px }
+body { margin: 0; padding: 72px 0 0 }
+main { padding: 2rem 5vw 3rem }
+.container { width: 500px; max-width: 100%; margin: 0 auto; padding: 0 }
+a { color: var(--accent); text-decoration: none }
+h1.title {
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-weight: 800; line-height: 1.1; padding-bottom: .1em;
+}
+.score-container, .best-container { background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: 12px }
+.score-container:after, .best-container:after { color: var(--muted) }
+.score-container .score-addition, .best-container .score-addition { color: var(--primary) }
+.game-intro { color: var(--muted) }
+.game-intro strong { color: var(--text) }
+.restart-button, .game-container .game-message a {
+  background: var(--grad); color: #fff; border-radius: 999px; font-weight: 600; cursor: pointer; transition: .25s;
+}
+.restart-button:hover, .game-container .game-message a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, .4) }
+.game-container { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; margin-left: auto; margin-right: auto }
+.grid-cell { background: color-mix(in srgb, var(--text) 7%, transparent); border-radius: 8px }
+.game-container .game-message { background: color-mix(in srgb, var(--bg) 78%, transparent); border-radius: 16px; color: var(--text) }
+.game-container .game-message.game-won { background: rgba(139, 92, 246, .55); color: #fff }
+.game-explanation { color: var(--muted); margin-top: 2rem }
+.game-explanation strong { color: var(--text) }
+hr { display: none }
+
+/* tiles: purple → blue progression */
+.tile .tile-inner { border-radius: 8px; color: #fff }
+.tile.tile-2 .tile-inner    { background: #3b3560; color: #fff; box-shadow: none }
+.tile.tile-4 .tile-inner    { background: #4c3f8a; color: #fff; box-shadow: none }
+.tile.tile-8 .tile-inner    { background: #6d4bd6 }
+.tile.tile-16 .tile-inner   { background: #8b5cf6 }
+.tile.tile-32 .tile-inner   { background: #7e79f1 }
+.tile.tile-64 .tile-inner   { background: #5e9bf6 }
+.tile.tile-128 .tile-inner  { background: #38bdf8; box-shadow: 0 0 24px 4px rgba(56, 189, 248, .35) }
+.tile.tile-256 .tile-inner  { background: #22d3ee; box-shadow: 0 0 24px 4px rgba(34, 211, 238, .4) }
+.tile.tile-512 .tile-inner  { background: #2dd4bf; box-shadow: 0 0 24px 4px rgba(45, 212, 191, .45) }
+.tile.tile-1024 .tile-inner { background: #34d399; box-shadow: 0 0 24px 4px rgba(52, 211, 153, .5) }
+.tile.tile-2048 .tile-inner { background: var(--grad); box-shadow: 0 0 30px 8px rgba(139, 92, 246, .55) }
+.tile.tile-super .tile-inner { background: #f43f5e }
+
+@media screen and (max-width: 520px) {
+  body { padding: 72px 0 0 }
+  main { padding: 1rem 5vw 2rem }
+  .container { width: 280px }
+  .game-intro { width: 55% }
+}

@@ -15,6 +15,8 @@ function render() {
   const cells = document.querySelectorAll('.cell');
   cells.forEach((cell, index) => {
     cell.textContent = board[index];
+    cell.classList.toggle('X', board[index] === 'X');
+    cell.classList.toggle('O', board[index] === 'O');
   });
 }
 
@@ -51,6 +53,7 @@ function clearBoard() {
   const cells = document.querySelectorAll('.cell');
   cells.forEach(cell => {
     cell.textContent = ''; // Clear the text content of each cell
+    cell.classList.remove('X', 'O');
   });
 }
 

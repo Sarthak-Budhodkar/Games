@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Snake Game</title>
-	<link rel="stylesheet" href="snake.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake | Mini Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="../Main/theme.css">
+<link rel="stylesheet" href="snake.css">
 </head>
 <body>
-  <a href="../index.html" class="home-button">X</a>
-	<div id="game-container">
-		<canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
-	</div>
-	<div class="keys">
-	  <a class="up arr" onclick="Snake.action('up')">
-	    <i class="chevron up"></i></a>
-	  <br />
-	  <a class="left arr" onclick="Snake.action('left')">
-	    <i class="chevron left"></i></a>
-	  <a class="down arr" onclick="Snake.action('down')">
-	    <i class="chevron down"></i></a>
-	  <a class="right arr" onclick="Snake.action('right')">
-	    <i class="chevron right"></i></a>
-	</div>
+<header class="nav">
+  <a href="https://sarthak-budhodkar.github.io/Home-page/" class="logo" aria-label="Home">SB<span>.</span></a>
+  <nav id="menu">
+    <a href="../index.html">Games</a>
+    <a href="https://sarthak-budhodkar.github.io/Home-page/">Portfolio</a>
+    <a href="https://github.com/Sarthak-Budhodkar/Games" target="_blank" rel="noopener">Source</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    <button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <div class="game-page">
+    <h1 class="game-title">Snake</h1>
+    <p class="game-sub">Eat the red apples to grow. Don't hit the walls or your own tail.</p>
+    <div class="panel">
+      <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+    </div>
+    <div class="keys" aria-label="On-screen controls">
+      <a class="arr up"    onclick="Snake.action('up')"    aria-label="Up"><i class="fas fa-chevron-up"></i></a>
+      <a class="arr left"  onclick="Snake.action('left')"  aria-label="Left"><i class="fas fa-chevron-left"></i></a>
+      <a class="arr down"  onclick="Snake.action('down')"  aria-label="Down"><i class="fas fa-chevron-down"></i></a>
+      <a class="arr right" onclick="Snake.action('right')" aria-label="Right"><i class="fas fa-chevron-right"></i></a>
+    </div>
+    <p class="hint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to move &middot; <kbd>Space</kbd> pause &middot; <kbd>Esc</kbd> reset</p>
+  </div>
+</main>
+
 <footer>
-        <p>This website is created by<br>
-        <a href="https://sarthaks-project.netlify.app/">Sarthak Budhaokar</a></p>
-  </footer>
-	<script type="text/javascript" src="snake.js"></script>
+  <div class="social">
+    <a href="https://github.com/Sarthak-Budhodkar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/SBudhodkar" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/sa43hak" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>Built by <a href="https://sarthak-budhodkar.github.io/Home-page/">Sarthak Budhodkar</a> &middot; &copy; 2026</p>
+</footer>
+<script src="../Main/theme.js"></script>
+<script src="snake.js"></script>
 </body>
 </html>

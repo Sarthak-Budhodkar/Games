@@ -1,33 +1,60 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic Tac Toe</title>
-  <link rel="stylesheet" href="tic-tac-toe.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe | Mini Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="../Main/theme.css">
+<link rel="stylesheet" href="tic-tac-toe.css">
 </head>
 <body>
-  <a href="../index.html" class="home-button">X</a>
-  <div class="container">
-    <h1>Tic Tac Toe</h1>
-    <div class="board" id="board">
-      <div class="cell" onclick="makeMove(0)"></div>
-      <div class="cell" onclick="makeMove(1)"></div>
-      <div class="cell" onclick="makeMove(2)"></div>
-      <div class="cell" onclick="makeMove(3)"></div>
-      <div class="cell" onclick="makeMove(4)"></div>
-      <div class="cell" onclick="makeMove(5)"></div>
-      <div class="cell" onclick="makeMove(6)"></div>
-      <div class="cell" onclick="makeMove(7)"></div>
-      <div class="cell" onclick="makeMove(8)"></div>
+<header class="nav">
+  <a href="https://sarthak-budhodkar.github.io/Home-page/" class="logo" aria-label="Home">SB<span>.</span></a>
+  <nav id="menu">
+    <a href="../index.html">Games</a>
+    <a href="https://sarthak-budhodkar.github.io/Home-page/">Portfolio</a>
+    <a href="https://github.com/Sarthak-Budhodkar/Games" target="_blank" rel="noopener">Source</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    <button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <div class="game-page">
+    <h1 class="game-title">Tic Tac Toe</h1>
+    <p class="game-sub">Take turns. First to line up three wins.</p>
+    <div class="panel">
+      <div class="board" id="board">
+        <div class="cell" onclick="makeMove(0)"></div>
+        <div class="cell" onclick="makeMove(1)"></div>
+        <div class="cell" onclick="makeMove(2)"></div>
+        <div class="cell" onclick="makeMove(3)"></div>
+        <div class="cell" onclick="makeMove(4)"></div>
+        <div class="cell" onclick="makeMove(5)"></div>
+        <div class="cell" onclick="makeMove(6)"></div>
+        <div class="cell" onclick="makeMove(7)"></div>
+        <div class="cell" onclick="makeMove(8)"></div>
+      </div>
     </div>
     <div id="result"></div>
-    <button class="restart-button" onclick="restartGame()">Restart</button>
+    <button class="btn primary restart-button" onclick="restartGame()"><i class="fas fa-rotate-right"></i> Restart</button>
   </div>
-  <footer>
-        <p>This website is created by<br>
-        <a href="https://sarthaks-project.netlify.app/">Sarthak Budhaokar</a></p>
-  </footer>
-  <script src="tic-tac-toe.js"></script>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/Sarthak-Budhodkar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/SBudhodkar" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/sa43hak" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>Built by <a href="https://sarthak-budhodkar.github.io/Home-page/">Sarthak Budhodkar</a> &middot; &copy; 2026</p>
+</footer>
+<script src="../Main/theme.js"></script>
+<script src="tic-tac-toe.js"></script>
 </body>
 </html>

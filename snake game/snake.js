@@ -38,7 +38,7 @@ var Snake = (function () {
   var game = {
 
     reset: function () {
-      ctx.fillStyle = 'grey';
+      ctx.fillStyle = '#26263a';
       ctx.fillRect(0, 0, canv.width, canv.height);
 
       tail = INITIAL_TAIL;
@@ -117,7 +117,7 @@ var Snake = (function () {
         if(player.y < 1) game.reset();
         if(player.y > tileCount-2) game.reset();
 
-        ctx.fillStyle = 'grey';
+        ctx.fillStyle = '#26263a';
         ctx.fillRect(0,0,gridSize-1,canv.height);
         ctx.fillRect(0,0,canv.width,gridSize-1);
         ctx.fillRect(canv.width-gridSize+1,0,gridSize,canv.height);
@@ -134,7 +134,7 @@ var Snake = (function () {
       if (velocity.x == -1 && velocity.y == 0) lastAction = ActionEnum.left;
       if (velocity.x == 1 && velocity.y == 0) lastAction = ActionEnum.right;
 
-      ctx.fillStyle = 'rgba(40,40,40,0.8)';
+      ctx.fillStyle = 'rgba(20,20,31,0.92)';
       ctx.fillRect(0,0,canv.width,canv.height);
 
       if(walls) HitWall();
@@ -154,7 +154,7 @@ var Snake = (function () {
         ctx.fillText("(space) pause", 24, 374);
       }
 
-      ctx.fillStyle = 'green';
+      ctx.fillStyle = '#8b5cf6';
       for(var i=0; i<trail.length-1; i++) {
         ctx.fillRect(trail[i].x * gridSize+1, trail[i].y * gridSize+1, gridSize-2, gridSize-2);
 
@@ -162,7 +162,7 @@ var Snake = (function () {
         if (!stopped && trail[i].x == player.x && trail[i].y == player.y){
           game.reset();
         }
-        ctx.fillStyle = 'lime';
+        ctx.fillStyle = '#38bdf8';
       }
       ctx.fillRect(trail[trail.length-1].x * gridSize+1, trail[trail.length-1].y * gridSize+1, gridSize-2, gridSize-2);
 
@@ -184,7 +184,7 @@ var Snake = (function () {
         })());
       }
 
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = '#f43f5e';
       ctx.fillRect(fruit.x * gridSize+1, fruit.y * gridSize+1, gridSize-2, gridSize-2);
 
       if(stopped) {
